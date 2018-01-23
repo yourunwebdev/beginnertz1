@@ -1,32 +1,49 @@
-.first {
-    height: 650px;
-    width: 1100px;
+.wrapper{
     position: relative;
-    background-image: url('../../img/background/video-bg.png');
-    background-repeat: no-repeat;
+    
+    height: 100%;
 }
 
+.allcontent{
+height: 100%;
+}
+
+.container{
+    width: 940px;
+    display: flex;
+    flex-direction: column;
+}
+.section{
+    height: 100vh;
+    min-height:650px;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.first {
+    position: absolute;
+    background-image: url('../../img/background/video-bg.png');
+}
 .first::before {
-    height: 650px;
-    width: 1100px;
     position: absolute;
   content: url('../../img/background/texture.png');
-
 }
 
-.logo, .menu, .order, .content__column, .menu__item {
-    display: inline-block;
-}
+
 .content__text--top{
     font-size: 72px;
     font-weight: 400;
     color: #f9b43b;
-    font-family: 'gagalinregular';
+    font-family:'gagalinregular';
 }
 
-.scroll{
-    display: inline-block;
-    text-align: middle;
+.content__text--bottom{
+    font-size: 65px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'lifehackmedium';
 }
 
 
