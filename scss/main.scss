@@ -35,6 +35,30 @@ height: 100%;
 .organic {
     position: absolute;
     background-image: url('../../img/background/video-bg.png');
+    &__header{
+        display:flex;
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+}
+
+.navigation{
+    display:flex;
+    align-items: center;
+    &__list{ 
+        display:flex;
+
+    }
+}
+
+.button{
+    border:none;
+    border-radius: 3px;
+    padding: 13px 16px;
+    color: $white;
+    &_color_orange{
+        background-color: $orange;
+    }
 }
 .organic::before {
     position: absolute;
