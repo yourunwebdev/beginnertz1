@@ -1,45 +1,125 @@
+
+
 //config
-@import "config/mixins.scss";
+// @import "config/mixins.scss";
 @import "config/variables.scss";
 //layout
 @import "layout/fonts.scss";
 @import "layout/base.scss";
 @import "layout/adjustments.scss";
 //sections
-@import "sections/organic.scss";
+@import "sections/welcome.scss";
 
-.wrapper{
-    position: relative;
+$orange: #e25028;
+$orange-hover: #c1401e;
+$yellow: #f8b43a;
+$green: #8ac03e;
+$dark: #2f3234;
+$white: #fff;
+$container-width: 940px;
+
+body {
+ 
+    font-size: 14px;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    line-height: 1.42;
+    color: $white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #000;
+  }
+  
+  *, *::before, *::after { 
+    box-sizing: border-box; 
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
     
-    height: 100%; 
-}
+    li{
+    list-style: none;
+   }
+ }
 
-.allcontent{
-height: 100%;
-}
+ h1,h2,h3,h4,h5,h6,{
+   margin:0;
+   font-weight:normal;
+ }
 
-.container{
+ p{
+   margin:0;
+ }
+//   .visuallyhidden {
+//     position: absolute;
+  
+//     width: 1px;
+//     height: 1px;
+//     margin: -1px;
+//     border: 0;
+//     padding: 0;
+  
+//     white-space: nowrap;
+  
+//     clip-path: inset(100%);
+//     clip: rect(0 0 0 0);
+//     overflow: hidden;
+//   }
+
+.wrapper {
+    position: relative;
+    min-width: $container-width + 20px;
+    height: 100%;
+  }
+  
+  .maincontent {
+    height: 100%;
+    min-height: 650px;
+  }
+  
+  .container {
     width: 940px;
+    margin: 0 auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-}
-.section{
+  }
+  
+  .section {
     height: 100vh;
-    min-height:650px;
+    background-color: rgba(0,0,0,0.31);
+    min-width: 940px;
+    min-height: 650px;
     display: flex;
     justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
-.organic {
-    position: absolute;
-    background-image: url('../../img/background/video-bg.png');
+
+.welcome {
+    background-image: url('../../img/background/welcome-bg.png');
     &__header{
         display:flex;
         justify-content: space-between;
         padding-top: 10px;
     }
+    &__content{
+        position:absolute;
+        top: 50%;
+        left:50%;
+        transform: translate (-50%, -50%);
+    }
+
 }
 
 .navigation{
@@ -47,7 +127,12 @@ height: 100%;
     align-items: center;
     &__list{ 
         display:flex;
-
+    }
+    &__link{
+        color: $white;
+    }
+    .button{
+        margin-left: 15px;
     }
 }
 
@@ -56,28 +141,46 @@ height: 100%;
     border-radius: 3px;
     padding: 13px 16px;
     color: $white;
+    transition: .3s;
+    cursor: pointer;
+
     &_color_orange{
         background-color: $orange;
+        &:hover {
+            background-color: $orange-hover;
+        }
     }
 }
-.organic::before {
-    position: absolute;
-  content: url('../../img/background/texture.png');
+
+.welcome-content{
+    display: flex;
+    align-items: center;
+    &__right{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
-
-.content__text--top{
+.section__title{
     font-size: 72px;
     font-weight: 400;
     color: #f9b43b;
     font-family:'Gagalin';
 }
 
-.content__text--bottom{
+.welcome-content__description{
     font-size: 65px;
     font-weight: 400;
     color: #fff;
     font-family: 'Lifehack';
+}
+
+.arrow{
+    position: absolute;
+    bottom: 40px;
+    left 50%;
+    transform: translateX(-50%);
 }
 
 
