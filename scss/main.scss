@@ -43,7 +43,7 @@ body {
   ul {
     margin: 0;
     padding: 0;
-    
+
     li{
     list-style: none;
    }
@@ -57,6 +57,7 @@ body {
  p{
    margin:0;
  }
+
 //   .visuallyhidden {
 //     position: absolute;
   
@@ -74,7 +75,6 @@ body {
 //   }
 
 .wrapper {
-    position: relative;
     min-width: $container-width + 20px;
     height: 100%;
   }
@@ -88,8 +88,6 @@ body {
     width: 940px;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
   }
   
@@ -103,20 +101,33 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-}
+    &__title{
+        font-size: 72px;
+        font-weight: 400;
+        
+        font-family:'Gagalin';
+        &--orange{
+            color: $yellow;
+        }        
+        &--black{
+        color: $dark;
+        }
+     }        
+    }
 
 
 .welcome {
-    background-image: url('../../img/background/welcome-bg.png');
+    background-image: url('../img/background/welcome-bg.png');
     &__header{
-        display:flex;
+        display: flex;
         justify-content: space-between;
         padding-top: 10px;
     }
+
     &__content{
-        position:absolute;
+        // position: absolute;
         top: 50%;
-        left:50%;
+        left: 50%;
         transform: translate (-50%, -50%);
     }
 
@@ -155,6 +166,7 @@ body {
 .welcome-content{
     display: flex;
     align-items: center;
+
     &__right{
         display:flex;
         flex-direction: column;
@@ -162,12 +174,7 @@ body {
     }
 }
 
-.section__title{
-    font-size: 72px;
-    font-weight: 400;
-    color: #f9b43b;
-    font-family:'Gagalin';
-}
+
 
 .welcome-content__description{
     font-size: 65px;
@@ -179,9 +186,61 @@ body {
 .arrow{
     position: absolute;
     bottom: 40px;
-    left 50%;
+    left: 50%;
     transform: translateX(-50%);
 }
 
+
+//section best
+
+.best{
+    background-image: url('../img/background/best-bg.png');
+    .container{
+        justify-content: center;
+        align-items: center;
+    }
+    .section__title{
+        margin-bottom: 60px;
+    }
+}
+
+.advantages{
+    &__list{
+        display: flex;
+        margin-left: -20px;
+    }
+    &__item{
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.advantage{
+    display:flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    &__icon{
+        width:100px;
+        height:100px;
+    }
+    &__img{
+        min-width: 100%;
+        max-height: 100%;
+    }
+    &__title{
+        color: $dark;
+        font-family: 'Lifehack';
+        font-size: 24.12px;
+        text-align: center;
+    }
+    &__description{
+        color: #696868;
+        font-family: 'Ubuntu';
+        font-size: 14.01px;
+        font-weight: 300;
+        text-align: center;
+    }
+}
 
 

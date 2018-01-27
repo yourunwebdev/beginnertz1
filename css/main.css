@@ -35,8 +35,6 @@
   font-style: normal; }
 
 body {
-  margin: 0;
-  padding: 0;
   font-size: 14px;
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   line-height: 1.42;
@@ -51,7 +49,9 @@ body {
 
 body, html {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  margin: 0;
+  padding: 0; }
 
 ul {
   margin: 0;
@@ -66,21 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin: 0; }
 
-.visuallyhidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden; }
-
 .wrapper {
-  position: relative;
   min-width: 960px;
   height: 100%; }
 
@@ -94,12 +80,6 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -110,12 +90,26 @@ p {
   background-color: rgba(0, 0, 0, 0.31);
   min-width: 940px;
   min-height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; }
+  .section__title {
+    font-size: 72px;
+    font-weight: 400;
+    font-family: 'Gagalin'; }
+    .section__title--orange {
+      color: #f8b43a; }
+    .section__title--black {
+      color: #2f3234; }
 
 .welcome {
-  background-image: url("../../img/background/welcome-bg.png"); }
+  background-image: url("../img/background/welcome-bg.png"); }
   .welcome__header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -125,7 +119,6 @@ p {
     justify-content: space-between;
     padding-top: 10px; }
   .welcome__content {
-    position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate -50%, -50%;
@@ -181,16 +174,70 @@ p {
     -ms-flex-pack: center;
     justify-content: center; }
 
-.section__title {
-  font-size: 72px;
-  font-weight: 400;
-  color: #f9b43b;
-  font-family: 'Gagalin'; }
-
-.welcome__text {
+.welcome-content__description {
   font-size: 65px;
   font-weight: 400;
   color: #fff;
   font-family: 'Lifehack'; }
+
+.arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.best {
+  background-image: url("../img/background/best-bg.png"); }
+  .best .container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .best .section__title {
+    margin-bottom: 60px; }
+
+.advantages__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -20px; }
+
+.advantages__item {
+  margin-left: 20px;
+  margin-bottom: 20px; }
+
+.advantage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 300px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .advantage__icon {
+    width: 100px;
+    height: 100px; }
+  .advantage__img {
+    min-width: 100%;
+    max-height: 100%; }
+  .advantage__title {
+    color: #2f3234;
+    font-family: 'Lifehack';
+    font-size: 24.12px;
+    text-align: center; }
+  .advantage__description {
+    color: #696868;
+    font-family: 'Ubuntu';
+    font-size: 14.01px;
+    font-weight: 300;
+    text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
