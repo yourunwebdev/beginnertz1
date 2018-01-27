@@ -117,7 +117,7 @@ body {
 
 
 .welcome {
-    background-image: url('../img/background/welcome-bg.png');
+    background-image: url('../img/bg/welcome-bg.png');
     &__header{
         display: flex;
         justify-content: space-between;
@@ -201,7 +201,7 @@ body {
 //section best
 
 .best{
-    background-image: url('../img/background/best-bg.png');
+    background-image: url('../img/bg/best-bg.png');
     .container{
         justify-content: center;
         align-items: center;
@@ -313,7 +313,7 @@ body {
 }
 
 .team{
-    background-image: url('../img/background/team-bg.png');
+    background-image: url('../img/bg/team-bg.png');
     &__box{
         display: flex;
         justify-content: center;
@@ -325,7 +325,18 @@ body {
 
     }
     &__item{
-
+        margin-bottom: 35px;
+        &--active{
+            .team__content-wrap{
+                height: 135px;
+            }
+            .team__trigger{
+             color:$yellow;
+                &::before{
+                    transform: translateY(-75%) rotate(-180deg);
+                }
+            }
+        }
     }
     &__trigger{
         display: flex;
@@ -333,6 +344,7 @@ body {
         font-size: 14px;
         font-family: 'Gagalin', 'Ubuntu', sans-serif;
         position: relative;
+        margin-bottom: 15px;
         &::before{
             content: '';
             display: block;
@@ -341,11 +353,14 @@ body {
             position: absolute;
             left:-18px;
             top: 50%;
-            transform: translateY(-25%) ;
+            transform: translateY(-25%) rotate(0deg);
+            transition: .5s;
         }
     }
     &__content-wrap{
-
+        height:0;
+        overflow: hidden;
+        transition: .5;
     }
     &__content{
        display: flex; 
@@ -365,5 +380,52 @@ body {
         margin-left: 20px;
         display: flex;
         flex-direction: column;
+    }
+}
+
+
+//menu
+
+.menu{
+    background-image: url('../img/bg/menu-bg.png');
+    &__list{
+        display:flex;
+    }
+    &__item{
+        display:flex;
+        &--active{
+            .menu__title{
+                color:$yellow;
+            }
+            .menu__content{
+                width:540px;
+            }
+        }
+    }
+    &__trigger{
+        display:flex;
+        align-items: flex-end;
+        background-repeat: repeat;
+        background-size: cover;
+        width:80px;
+        padding-bottom: 35px;
+    }
+    &__title{
+        color: $white;
+        font-size: 40px;
+        font-family: 'Gagalin', 'Ubuntu', sans-serif;
+        transform: rotate(-90deg);
+        white-space: nowrap;
+        width: 100%;
+    }
+    &__content{
+        width:0px;
+        overflow: hidden;
+        background-color: rgba(47,50,52, .9);
+        transition: .5s;
+    }
+    &__text{
+        padding: 60px 35px;
+        min-width: 540px;
     }
 }
