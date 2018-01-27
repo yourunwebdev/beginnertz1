@@ -151,6 +151,7 @@ body {
     border:none;
     border-radius: 3px;
     padding: 13px 16px;
+    text-transform: uppercase;
     color: $white;
     transition: .3s;
     cursor: pointer;
@@ -159,6 +160,12 @@ body {
         background-color: $orange;
         &:hover {
             background-color: $orange-hover;
+        }
+    }
+    &_color_black{
+        background-color: $dark;
+        &:hover {
+            background-color: #1f2122;
         }
     }
 }
@@ -243,4 +250,64 @@ body {
     }
 }
 
+.reviews{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        width:100%;
+    }
+    &__item{
+        width: 25%;
+        height:50%;
+    }
+}
 
+.review{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &__img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+        z-index: -1;
+    }
+    &__title{
+        color: $white;
+        font-family: 'Gagalin';
+        font-size: 14px;
+        font-weight: 400;
+    }
+    &__description{
+        color: $white;
+        font-family: 'Ubuntu';
+        font-size: 14px;
+        font-weight: 300;
+        
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        background-color: rgba(20,20,20,0.8);
+        opacity: 0;
+        transform: scale(.8);
+        transition: .5s;
+    }
+    &:hover{
+        .review__content{
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
